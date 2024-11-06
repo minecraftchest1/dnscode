@@ -19,6 +19,8 @@ class Record:
 	data: str	= '0.0.0.0'
 	ttl: int	= 6400
 
+
+
 @dataclass
 class SOA(Record):
 	def __init__(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com', serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200, expire: int = 15552000, ttl: int = 21700):
@@ -33,8 +35,6 @@ class SOA(Record):
 	def __str__(self):
 		return str(Record(self.name, self.ttl, f'{self.mname} {self.rname} {self.serial} {self.refresh} {self.retry} {self.expire} {self.ttl}'))
 
-	name: str		= '@'
-	rtype: str		= 'SOA'
 	mname: str		= 'ns1.example.com'
 	rname: str		= 'admin.example.com'
 	serial: int		= int(time.time())
