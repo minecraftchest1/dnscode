@@ -1,6 +1,15 @@
 from enum import Enum
 from dataclasses import dataclass, field
 import time
+import ipaddress
+import dns
+
+class InvaliadDataException(Exception):
+	"""Exception raied when invaliad data is passed to a record"""
+
+	def __init__(self, message):
+		self.message	= message
+		super.__init__(self, message)
 
 @dataclass
 class Record:
@@ -19,6 +28,29 @@ class Record:
 	data: str	= '0.0.0.0'
 	ttl: int	= 6400
 
+@dataclass
+class A(Record):
+	def __init__(self, name: str = '@', ttl: str = 3600, data: str = '0.0.0.0'):
+		if isinstance(ipaddress.ip_address(data), ipaddress.IPv4Address):
+			self.data = data
+		else:
+			raise InvaliadDataException
+
+		self.rtype	= 'A'
+		self.name	= name
+		self.ttl	= ttl
+
+@dataclass
+class AAAA(Record):
+	def __init__(self, name: str = '@', ttl: str = 3600, data: str = '0.0.0.0'):
+		if isinstance(ipaddress.ip_address(data), ipaddress.IPv4Address):
+			self.data = data
+		else:
+			raise InvaliadDataException
+
+		self.rtype	= 'AAAA'
+		self.name	= name
+		self.ttl	= ttl
 
 
 @dataclass
