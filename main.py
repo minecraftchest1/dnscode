@@ -45,6 +45,7 @@ class SOA(Record):
 
 @dataclass
 class Zone:
+	origin: str
 	records: list = field(default_factory=list)
 
 	def __str__(self):
@@ -55,6 +56,16 @@ class Zone:
 
 		return zone
 
+	def new_soa(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com', serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200, expire: int = 15552000, ttl: int = 21700):
+		if mname[-1] != '.':
+			mname = mname + '.' + self.origin
+		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
+
+	def new_record(self, name: str = '@', ttl: str = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
+		if name[-1] != '.':
+			name = name + '.' + self.origin
+		self.add(name=name, ttl=ttl, rtype=rtype, data=data)
+
 	def add(self, record: Record):
 		self.records.append(record)
 
@@ -62,5 +73,6 @@ class Zone:
 		with open(filepath, 'w') as file:
 			for record in self.records:
 				file.write(str(record) + '\n')
+				print(str(record))
 		file.close()
 
