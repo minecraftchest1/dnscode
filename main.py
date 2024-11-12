@@ -99,14 +99,18 @@ class Zone:
 
 		return zone
 
+	def __mkfqdn(self, name):
+		if name[-1] != '.':
+			return name + '.' + self.origin
+		else:
+			return name
+
 	def new_soa(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com', serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200, expire: int = 15552000, ttl: int = 21700):
-		if mname[-1] != '.':
-			mname = mname + '.' + self.origin
+		mname = self.__mkfqdn(name)
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
 
 	def new_record(self, name: str = '@', ttl: str = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
-		if name[-1] != '.':
-			name = name + '.' + self.origin
+		name = self.__mkfqdn(name)
 		self.add(name=name, ttl=ttl, rtype=rtype, data=data)
 
 	def add(self, record: Record):
