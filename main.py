@@ -3,13 +3,14 @@ from dataclasses import dataclass, field
 import time
 import ipaddress
 import dns
+import fqdn
 
 class InvaliadDataException(Exception):
 	"""Exception raied when invaliad data is passed to a record"""
 
 	def __init__(self, message):
 		self.message	= message
-		super.__init__(self, message)
+		super().__init__(self, message)
 
 @dataclass
 class Record:
@@ -34,7 +35,7 @@ class A(Record):
 		if isinstance(ipaddress.ip_address(data), ipaddress.IPv4Address):
 			self.data = data
 		else:
-			raise InvaliadDataException
+			raise InvaliadDataException(message=f'{data} is not a valiad IPv4 Address.')
 
 		self.rtype	= 'A'
 		self.name	= name
@@ -46,11 +47,21 @@ class AAAA(Record):
 		if isinstance(ipaddress.ip_address(data), ipaddress.IPv4Address):
 			self.data = data
 		else:
-			raise InvaliadDataException
+			raise InvaliadDataException(message=f'{data} is not a valiad IPv6 Address.')
 
 		self.rtype	= 'AAAA'
 		self.name	= name
 		self.ttl	= ttl
+
+@dataclass
+class CNAME(Record):
+	def __init__(self, name: str = '@', ttl: str = 3600, data: str = '0.0.0.0'):
+		self.rtype	= 'CNAME'
+		self.name	= name
+		self.ttl	= ttl
+
+		if(fqdn.FQDN(data).is_valid):
+			self.data = data
 
 
 @dataclass
