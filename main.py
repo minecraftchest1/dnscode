@@ -109,7 +109,7 @@ class Zone:
 		mname = self.__mkfqdn(name)
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
 
-	def new_record(self, name: str = '@', ttl: str = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
+	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		name = self.__mkfqdn(name)
 		self.add(name=name, ttl=ttl, rtype=rtype, data=data)
 
