@@ -105,6 +105,14 @@ class Zone:
 		else:
 			return name
 
+	def new_A(self, name: str = '@', ttl: int = 3600, data: str = '0.0.0.0'):
+		name = self.__mkfqdn(name)
+		self.add(A(name=name, ttl=ttl, data=data))
+
+	def new_AAAA(self, name: str = '@', ttl: int = 3600, data: str = '0.0.0.0'):
+		name = self.__mkfqdn(name)
+		self.add(AAAA(name=name, ttl=ttl, data=data))
+
 	def new_soa(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com', serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200, expire: int = 15552000, ttl: int = 21700):
 		mname = self.__mkfqdn(name)
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
