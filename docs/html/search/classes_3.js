@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['record_0',['Record',['../classmain_1_1Record.html',1,'main']]]
+  ['mx_0',['MX',['../classmain_1_1MX.html',1,'main']]]
 ];

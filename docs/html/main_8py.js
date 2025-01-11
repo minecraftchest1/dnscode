@@ -5,6 +5,8 @@ var main_8py =
     [ "main.A", "classmain_1_1A.html", "classmain_1_1A" ],
     [ "main.AAAA", "classmain_1_1AAAA.html", "classmain_1_1AAAA" ],
     [ "main.CNAME", "classmain_1_1CNAME.html", "classmain_1_1CNAME" ],
+    [ "main.MX", "classmain_1_1MX.html", "classmain_1_1MX" ],
+    [ "main.PTR", "classmain_1_1PTR.html", "classmain_1_1PTR" ],
     [ "main.SOA", "classmain_1_1SOA.html", "classmain_1_1SOA" ],
     [ "main.Zone", "classmain_1_1Zone.html", "classmain_1_1Zone" ]
 ];

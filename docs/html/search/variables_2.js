@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['message_0',['message',['../classmain_1_1InvaliadDataException.html#a3522d9917ebe133d5040846194a2c376',1,'main::InvaliadDataException']]],
-  ['mname_1',['mname',['../classmain_1_1SOA.html#a27e963bb7eec0a618d23b3703171f317',1,'main.SOA.mname'],['../namespacetest.html#a378be124cdc188f8c89d1929ff0c5d1d',1,'test.mname']]]
+  ['host_0',['host',['../classmain_1_1MX.html#a9aa6ba11c15ae03c5e62c6d2807df449',1,'main.MX.host'],['../classmain_1_1PTR.html#ae1c47610c8f981d3c3f83e2131c1c380',1,'main.PTR.host']]]
 ];

@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['rclass_0',['rclass',['../classmain_1_1Record.html#a61d72a7bcf39cb31825285b3d2a9620c',1,'main::Record']]],
-  ['record_1',['Record',['../classmain_1_1Record.html',1,'main']]],
-  ['record_2',['record',['../namespacetest.html#a646f7770e4d7d7471f8f2309410b3479',1,'test']]],
-  ['records_3',['records',['../classmain_1_1Zone.html#afd4e13b063d7ce7af8698db45424b780',1,'main::Zone']]],
-  ['refresh_4',['refresh',['../classmain_1_1SOA.html#a0fa3fe8249e3f3778198366a08d4062d',1,'main::SOA']]],
-  ['retry_5',['retry',['../classmain_1_1SOA.html#aee3f404f0dded0354e3f425f2a615ec0',1,'main::SOA']]],
-  ['rname_6',['rname',['../classmain_1_1SOA.html#a1b0cc33b7e65f1a8f2944426d46dd110',1,'main::SOA']]],
-  ['rtype_7',['rtype',['../classmain_1_1Record.html#a34d0c8efd9876c46ef6fd7c9efce971c',1,'main.Record.rtype'],['../classmain_1_1A.html#a8c19478f9174b5ced5f4c91d44ac2a98',1,'main.A.rtype'],['../classmain_1_1AAAA.html#ad8c9496976b58d9fb8313054cab1cd80',1,'main.AAAA.rtype'],['../classmain_1_1CNAME.html#ab87cf44e0772759e53462ac5f1135ec8',1,'main.CNAME.rtype']]]
+  ['name_0',['name',['../classmain_1_1Record.html#a5b17196a323776903beb9f4fc124b5ce',1,'main.Record.name'],['../classmain_1_1A.html#a3d96c7e97ae6616eaadcbd8d550e3055',1,'main.A.name'],['../classmain_1_1AAAA.html#a1b3629fa50acfadf6ede0117569c63ac',1,'main.AAAA.name'],['../classmain_1_1CNAME.html#a073737e65984421d4506bdd94e3fa775',1,'main.CNAME.name'],['../classmain_1_1MX.html#a45877922fcfbb9eb8db97c5a19898b50',1,'main.MX.name'],['../classmain_1_1PTR.html#ae8467bcf62542c64fb2325ed30d8c382',1,'main.PTR.name'],['../classmain_1_1SOA.html#a2f8eebb0b137887827b2942485979331',1,'main.SOA.name']]],
+  ['new_5fa_1',['new_A',['../classmain_1_1Zone.html#adba760f672d54a3df8c18bd5b7e5a858',1,'main::Zone']]],
+  ['new_5faaaa_2',['new_AAAA',['../classmain_1_1Zone.html#a4565629509df65dbbf6fc6ac61175efb',1,'main::Zone']]],
+  ['new_5frecord_3',['new_record',['../classmain_1_1Zone.html#a4992ac1055e805e498589e0845e7961c',1,'main::Zone']]],
+  ['new_5fsoa_4',['new_soa',['../classmain_1_1Zone.html#abe4ab49a4368b32c96cf40f8bd1b7823',1,'main::Zone']]]
 ];

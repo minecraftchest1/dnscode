@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serial_0',['serial',['../classmain_1_1SOA.html#a6f276fb739af100b41ba986c999cb77c',1,'main::SOA']]]
+  ['priority_0',['priority',['../classmain_1_1MX.html#aabfacc68cd3bbefe829fdefdadc5c29e',1,'main::MX']]]
 ];

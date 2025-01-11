@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['zone_0',['Zone',['../classmain_1_1Zone.html',1,'main']]],
-  ['zone_1',['zone',['../namespacezone.html',1,'zone'],['../namespacetest.html#a36f8cb527290e32f62832b58651ece71',1,'test.zone']]],
-  ['zone_2epy_2',['zone.py',['../zone_8py.html',1,'']]]
+  ['save_5ffile_0',['save_file',['../classmain_1_1Zone.html#a10ef571aa905f9e97afa5419e67b1e4a',1,'main::Zone']]],
+  ['serial_1',['serial',['../classmain_1_1SOA.html#a6f276fb739af100b41ba986c999cb77c',1,'main::SOA']]],
+  ['soa_2',['SOA',['../classmain_1_1SOA.html',1,'main']]]
 ];
