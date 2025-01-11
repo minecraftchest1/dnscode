@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['soa_0',['SOA',['../classmain_1_1SOA.html',1,'main']]]
+  ['record_0',['Record',['../classmain_1_1Record.html',1,'main']]]
 ];
