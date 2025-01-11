@@ -125,7 +125,7 @@ class SOA(Record):
 @dataclass
 class SRV(Record):
 	def __int__(self, name: str = '@', ttl: str = 3600, service: str = "service", protocol: str = 'proto',
-				priority: int = 10, weight: int = 10, port: int = 0, target: str = target
+				priority: int = 10, weight: int = 10, port: int = 0, target: str = 'example.com'
 				):
 		self.rtype	= 'PTR'
 		self.name	= '_{service}._{protocol}.name'
@@ -176,9 +176,22 @@ class Zone:
 		name = self.__mkfqdn(name)
 		self.add(MX(name=name, ttl=ttl, priority=priority, host=host))
 
+	def new_NS(self, name: str = '@', ttl: int = 3600, target: str = 'example.com'):
+		name = self.__mkfqdn(name)
+		self.add(NS(name=name, ttl=ttl, target=target))
+
+	def new_PTR(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
+		name = self.__mkfqdn(name)
+		self.add(PTR(name=name, ttl=ttl, host=host))
+
 	def new_soa(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com', serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200, expire: int = 15552000, ttl: int = 21700):
 		mname = self.__mkfqdn(name)
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
+
+	def new_SRV(self, name: str = '@', ttl: int = 3600, service: str = 'service', protocol: str = 'proto', priority: int = 10, weight: int = 10, target: str = 'example.com'):
+		name = self.__mkfqdn(name)
+		self.add(SRV(name=name, ttl=ttl, target=target))
+
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		name = self.__mkfqdn(name)

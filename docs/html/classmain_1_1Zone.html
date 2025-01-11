@@ -117,8 +117,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4b1adc5dce55fd19374b60bd7acd76a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addb69a78b5b55a50f5a9c66ac8554c64" id="r_addb69a78b5b55a50f5a9c66ac8554c64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb69a78b5b55a50f5a9c66ac8554c64">new_MX</a> (self, str name='@', int ttl=3600, int priority=10, str host='example.com')</td></tr>
 <tr class="separator:addb69a78b5b55a50f5a9c66ac8554c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6c2c02843a4146b9c635be858433cd" id="r_a5c6c2c02843a4146b9c635be858433cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c6c2c02843a4146b9c635be858433cd">new_NS</a> (self, str name='@', int ttl=3600, str target='example.com')</td></tr>
+<tr class="separator:a5c6c2c02843a4146b9c635be858433cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd60dffb4462ba1a52869e7cba902ae" id="r_a2bd60dffb4462ba1a52869e7cba902ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bd60dffb4462ba1a52869e7cba902ae">new_PTR</a> (self, str name='@', int ttl=3600, str host='example.com')</td></tr>
+<tr class="separator:a2bd60dffb4462ba1a52869e7cba902ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4ab49a4368b32c96cf40f8bd1b7823" id="r_abe4ab49a4368b32c96cf40f8bd1b7823"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe4ab49a4368b32c96cf40f8bd1b7823">new_soa</a> (self, str mname='ns1.example.com', str rname='admin.example.com', int serial=int(time.time()), int refresh=86400, int retry=7200, int expire=15552000, int ttl=21700)</td></tr>
 <tr class="separator:abe4ab49a4368b32c96cf40f8bd1b7823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f2b3e463023a0610cd169e455875d0" id="r_a51f2b3e463023a0610cd169e455875d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f2b3e463023a0610cd169e455875d0">new_SRV</a> (self, str name='@', int ttl=3600, str service='service', str protocol='proto', int priority=10, int weight=10, str target='example.com')</td></tr>
+<tr class="separator:a51f2b3e463023a0610cd169e455875d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4992ac1055e805e498589e0845e7961c" id="r_a4992ac1055e805e498589e0845e7961c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4992ac1055e805e498589e0845e7961c">new_record</a> (self, str name='@', int ttl=3600, str rtype='<a class="el" href="classmain_1_1A.html">A</a>', str data='0.0.0.0')</td></tr>
 <tr class="separator:a4992ac1055e805e498589e0845e7961c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55437b4d8db5d82758547fb3f4842e2f" id="r_a55437b4d8db5d82758547fb3f4842e2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55437b4d8db5d82758547fb3f4842e2f">add</a> (self, <a class="el" href="classmain_1_1Record.html">Record</a> record)</td></tr>
@@ -299,6 +305,68 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5c6c2c02843a4146b9c635be858433cd" name="a5c6c2c02843a4146b9c635be858433cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c6c2c02843a4146b9c635be858433cd">&#9670;&#160;</a></span>new_NS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main.Zone.new_NS </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'@'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>ttl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">3600</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>target</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'example.com'</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bd60dffb4462ba1a52869e7cba902ae" name="a2bd60dffb4462ba1a52869e7cba902ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd60dffb4462ba1a52869e7cba902ae">&#9670;&#160;</a></span>new_PTR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main.Zone.new_PTR </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'@'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>ttl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">3600</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>host</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'example.com'</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4992ac1055e805e498589e0845e7961c" name="a4992ac1055e805e498589e0845e7961c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4992ac1055e805e498589e0845e7961c">&#9670;&#160;</a></span>new_record()</h2>
 
@@ -380,6 +448,57 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>ttl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">21700</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51f2b3e463023a0610cd169e455875d0" name="a51f2b3e463023a0610cd169e455875d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f2b3e463023a0610cd169e455875d0">&#9670;&#160;</a></span>new_SRV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main.Zone.new_SRV </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'@'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>ttl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">3600</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>service</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'service'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>protocol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'proto'</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>priority</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str </td>          <td class="paramname"><span class="paramname"><em>target</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'example.com'</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
