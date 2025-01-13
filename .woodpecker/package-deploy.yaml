@@ -17,5 +17,5 @@ steps:
     - python3 -m pip install twine
     - python3 -m twine upload --repository testpypi dist/*
    environment:
-    - TWINE_PASSWORD:
-        from_secret: pypi-token
+     TWINE_PASSWORD:
+       from_secret: pypi-token
