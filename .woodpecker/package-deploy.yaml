@@ -12,9 +12,10 @@ steps:
  - name: publish
    when:
     - event: tag
-   image: gitea.elara.ws/music-kraken/plugin-twine
-   settings:
-     repository_url: "https://test.pypi.org"
-     username: __token__
-     password:
-       from_secret: pypi-token
+   image: python:3-alpine
+   commands:
+    - python3 -m pip install twine
+	- python3 -m twine upload --repository testpypi dist/*
+   environment:
+    - TWINE_PASSWORD:
+	    from_secret: pypi-token
