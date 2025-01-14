@@ -9,7 +9,7 @@ steps:
     - python3 -m pip install --upgrade build
     - python3 -m build
 
- - name: publish
+ - name: publish PyPi
    when:
     - event: tag
    image: python:3-alpine
@@ -19,3 +19,16 @@ steps:
    environment:
      TWINE_PASSWORD:
        from_secret: pypi-token
+   depends_on: build
+
+ - name: publish Forgejo
+   when:
+    - event: tag
+   image: python:3-alpine
+   commands:
+    - python3 -m pip install twine
+    - python3 -m twine upload --repository-url https://forgejo.example.com/api/packages/minecraftchest1/pypi dist/*
+   environment:
+     TWINE_PASSWORD:
+       from_secret: forgejo-token
+   depends_on: build
