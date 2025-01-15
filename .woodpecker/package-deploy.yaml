@@ -27,7 +27,7 @@ steps:
    image: python:3-alpine
    commands:
     - python3 -m pip install twine
-    - python3 -m twine upload --repository-url https://forgejo.example.com/api/packages/minecraftchest1/pypi dist/*
+    - python3 -m twine upload --repository-url https://code.minecraftchest1.us/api/packages/minecraftchest1/pypi dist/*
    environment:
      TWINE_USERNAME: minecraftchest1
      TWINE_PASSWORD:
