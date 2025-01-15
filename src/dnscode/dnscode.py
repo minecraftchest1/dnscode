@@ -79,15 +79,15 @@ class CNAME(Record):
 
 	#target: str
 
-	def __init__(self, name: str = '@', ttl: int = 3600, target: str = 'example.com'):
+	def __init__(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		self.rtype	= 'CNAME'
 		self.name	= name
 		self.ttl	= ttl
 
-		if fqdn.FQDN(target).is_valid:
-			self.data = target
+		if fqdn.FQDN(host).is_valid:
+			self.data = host
 		else:
-			raise InvalidDataException(message=f'{target} is not a valid FQDN')
+			raise InvalidDataException(message=f'{host} is not a valid FQDN')
 
 @dataclass
 class MX(Record):
@@ -114,16 +114,16 @@ class NS(Record):
 
 	#target: str
 
-	def __init__(self, name: str = '@', ttl: int = 3600, target: str = 'example.com'):
+	def __init__(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		self.rtype	= 'NS'
 		self.name	= name
 		self.ttl	= ttl
-		self.target	= target
+		self.host	= target
 
-		if fqdn.FQDN(target).is_valid:
-			self.data = target
+		if fqdn.FQDN(host).is_valid:
+			self.data = host
 		else:
-			raise InvalidDataException(message=f'{target} is not a valid FQDN')
+			raise InvalidDataException(message=f'{host} is not a valid FQDN')
 
 @dataclass
 class PTR(Record):
@@ -178,7 +178,7 @@ class SRV(Record):
 	#target: str
 
 	def __init__(self, name: str = '@', ttl: int = 3600, service: str = "service", protocol: str = 'proto',
-				priority: int = 10, weight: int = 10, port: int = 0, target: str = 'example.com'):
+				priority: int = 10, weight: int = 10, port: int = 0, host: str = 'example.com'):
 		self.rtype	= 'SRV'
 		self.name	= f"_{service}._{protocol}.{name}"
 		self.ttl	= ttl
@@ -195,12 +195,11 @@ class SRV(Record):
 
 		self.data = f"{self.priority} {self.weight} {self.port} {self.target}"
 
-@dataclass
+#@dataclass
 class Zone:
 	"""Represents a DNS zone containing multiple records."""
-
 	origin: str
-	records: list = field(default_factory=list)
+	records:list = []
 
 	def __init__(self, origin: str):
 		"""Initializes a zone with the given origin and ensures it ends with a dot."""
@@ -223,30 +222,30 @@ class Zone:
 		else:
 			return name
 
-	def new_A(self, name: str = '@', ttl: int = 3600, data: str = '0.0.0.0'):
+	def new_A(self, name: str = '@', ttl: int = 3600, host: str = '0.0.0.0'):
 		"""Creates and adds a new A record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(A(name=name, ttl=ttl, data=data))
+		self.add(A(name=name, ttl=ttl, host=host))
 
-	def new_AAAA(self, name: str = '@', ttl: int = 3600, data: str = '0.0.0.0'):
+	def new_AAAA(self, name: str = '@', ttl: int = 3600, host: str = '0.0.0.0'):
 		"""Creates and adds a new AAAA record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(AAAA(name=name, ttl=ttl, data=data))
+		self.add(AAAA(name=name, ttl=ttl, host=host))
 
-	def new_CNAME(self, name: str = '@', ttl: int = 3600, data: str = 'example.com'):
+	def new_CNAME(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(CNAME(name=name, ttl=ttl, target=data))
+		self.add(CNAME(name=name, ttl=ttl, host=host))
 
 	def new_MX(self, name: str = '@', ttl: int = 3600, priority: int = 10, host: str = 'example.com'):
 		"""Creates and adds a new MX record to the zone."""
 		name = self.__mkfqdn(name)
 		self.add(MX(name=name, ttl=ttl, priority=priority, host=host))
 
-	def new_NS(self, name: str = '@', ttl: int = 3600, target: str = 'example.com'):
+	def new_NS(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new NS record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(NS(name=name, ttl=ttl, target=target))
+		self.add(NS(name=name, ttl=ttl, host=host))
 
 	def new_PTR(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new PTR record to the zone."""
@@ -261,11 +260,11 @@ class Zone:
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
 
 	def new_SRV(self, name: str = '@', ttl: int = 3600, service: str = 'service', protocol: str = 'proto',
-				priority: int = 10, weight: int = 10, target: str = 'example.com'):
+				priority: int = 10, weight: int = 10, host: str = 'example.com'):
 		"""Creates and adds a new SRV record to the zone."""
 		name = self.__mkfqdn(name)
 		self.add(SRV(name=name, ttl=ttl, service=service, protocol=protocol,
-				priority=priority, weight=weight, target=target))
+				priority=priority, weight=weight, host=host))
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		"""Creates and adds a generic DNS record to the zone."""
