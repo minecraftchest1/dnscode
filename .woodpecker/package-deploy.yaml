@@ -15,7 +15,7 @@ steps:
    image: python:3-alpine
    commands:
     - python3 -m pip install twine
-    - python3 -m twine upload --repository testpypi dist/*
+    - python3 -m twine upload --repository pypi dist/*
    environment:
      TWINE_PASSWORD:
        from_secret: pypi-token
