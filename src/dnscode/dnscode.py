@@ -51,10 +51,10 @@ class A(Record):
 		if isinstance(ipaddress.ip_address(host), ipaddress.IPv4Address):
 			self.data = host
 		else:
-			raise InvalidDataException(message=f'{host} is not a valid IPv4 address.')
+			raise InvalidDataException(message=f'{str(host)} is not a valid IPv4 address.')
 
 		self.rtype	= 'A'
-		self.name	= name
+		self.name	= str(name)
 		self.ttl	= ttl
 
 @dataclass
@@ -67,10 +67,10 @@ class AAAA(Record):
 		if isinstance(ipaddress.ip_address(host), ipaddress.IPv6Address):
 			self.data = host
 		else:
-			raise InvalidDataException(message=f'{host} is not a valid IPv6 address.')
+			raise InvalidDataException(message=f'{str(host)} is not a valid IPv6 address.')
 
 		self.rtype	= 'AAAA'
-		self.name	= name
+		self.name	= str(name)
 		self.ttl	= ttl
 
 @dataclass
@@ -81,7 +81,7 @@ class CNAME(Record):
 
 	def __init__(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		self.rtype	= 'CNAME'
-		self.name	= name
+		self.name	= str(name)
 		self.ttl	= ttl
 
 		if fqdn.FQDN(host).is_valid:
@@ -217,17 +217,17 @@ class Zone:
 
 	def __mkfqdn(self, name: str) -> str:
 		"""Converts a name to a fully qualified domain name (FQDN)."""
-		if name[-1] != '.':
-			return name + '.' + self.origin
+		if str(name)[-1] != '.':
+			return str(name) + '.' + self.origin
 		else:
-			return name
+			return str(name)
 
 	def new_A(self, name: str = '@', ttl: int = 3600, host: str = '0.0.0.0'):
 		"""Creates and adds a new A record to the zone."""
 		name = self.__mkfqdn(name)
 		self.add(A(name=name, ttl=ttl, host=host))
 
-	def new_AAAA(self, name: str = '@', ttl: int = 3600, host: str = '0.0.0.0'):
+	def new_AAAA(self, name: str = '@', ttl: int = 3600, host: str = 'fe80::42:2cff:fe29:8db1'):
 		"""Creates and adds a new AAAA record to the zone."""
 		name = self.__mkfqdn(name)
 		self.add(AAAA(name=name, ttl=ttl, host=host))
