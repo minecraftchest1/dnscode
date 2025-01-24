@@ -23,8 +23,8 @@ def test_A(tmp_path):
 	with pytest.raises(ValueError):
 		zone.new_A(host="0.0.0.0/32")
 
-	zone_file = tmp_path / "test-A.zone"
-	zone.save_file(zone_file)
+	zone_file_1 = tmp_path / "test-A.zone"
+	zone.save_file(zone_file_1)
 
 	expected = """1.minecraftchest1.us. 3600 IN A 0.0.0.0
 2.minecraftchest1.us. 60 IN A 0.0.0.0
@@ -37,7 +37,7 @@ def test_A(tmp_path):
 @.minecraftchest1.us. 60 IN A 0.0.0.0
 """
 
-	f = open(zone_file, "rt")
+	f = open(zone_file_1, "rt")
 	assert expected == f.read()
 
 ##############################################
@@ -64,21 +64,21 @@ def test_AAAA(tmp_path):
 	with pytest.raises(ValueError):
 		zoneAAAA.new_AAAA(host="-1.0.0.0/32")
 
-	zone_file = tmp_path / "test-AAAA.zone"
-	zoneAAAA.save_file(zone_file)
+	zone_file_2 = tmp_path / "test-AAAA.zone"
+	zoneAAAA.save_file(zone_file_2)
 
-	expected = """0.minecraftchest1.us. 3600 IN A 0.0.0.0
-1.minecraftchest1.us. 60 IN A 0.0.0.0
-2.minecraftchest1.us. 60 IN A 0.0.0.0
-@.minecraftchest0.us. 3600 IN A 0.0.0.0
-3.minecraftchest1.us. 3600 IN A 0.0.0.0
-@.minecraftchest0.us. 120 IN A 0.0.0.0
-4.minecraftchest1.us. 120 IN A 0.0.0.0
-5.minecraftchest1.us. 3600 IN A 0.0.0.0
-@.minecraftchest0.us. 60 IN A 0.0.0.0
+	expected = """0.minecraftchest1.us. 3600 IN AAAA fe80::42:2cff:fe29:8db1
+1.minecraftchest1.us. 60 IN AAAA fe80::42:2cff:fe29:8db1
+2.minecraftchest1.us. 60 IN AAAA fe80::42:2cff:fe29:8db1
+@.minecraftchest1.us. 3600 IN AAAA fe79::42:2cff:fe29:8db1
+3.minecraftchest1.us. 3600 IN AAAA fe80::42:2cff:fe29:8db1
+@.minecraftchest1.us. 119 IN AAAA fe80::42:2cff:fe29:8db1
+4.minecraftchest1.us. 120 IN AAAA fe80::42:2cff:fe29:8db1
+5.minecraftchest1.us. 3600 IN AAAA fe80::42:2cff:fe29:8db1
+@.minecraftchest1.us. 59 IN AAAA fe80::42:2cff:fe29:8db1
 """
 
-	f = open(zone_file, "rt")
+	f = open(zone_file_2, "rt")
 	assert expected == f.read()
 
 
