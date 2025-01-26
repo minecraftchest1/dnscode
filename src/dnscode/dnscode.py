@@ -195,18 +195,18 @@ class SRV(Record):
 
 		self.data = f"{self.priority} {self.weight} {self.port} {self.target}"
 
-#@dataclass
+@dataclass
 class Zone:
 	"""Represents a DNS zone containing multiple records."""
-	origin: str
-	records:list = []
+	origin: str = 'example.com'
+	records: list = field(default_factory=list)
 
-	def __init__(self, origin: str):
+	def __post_init__(self):
 		"""Initializes a zone with the given origin and ensures it ends with a dot."""
-		if origin[-1] != '.':
-			self.origin = origin + '.'
-		else:
-			self.origin = origin
+		if self.origin[-1] != '.':
+			self.origin = self.origin + '.'
+
+		#self.records: list = field(default_factory=list)
 
 	def __str__(self):
 		"""Returns a string representation of the zone."""
