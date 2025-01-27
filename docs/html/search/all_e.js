@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['zone_0',['Zone',['../classmain_1_1Zone.html',1,'main']]],
-  ['zone_1',['zone',['../namespaceminecraftchest1.html#a6498d3c2a0bf9a2aa54a0e38b838ac32',1,'minecraftchest1.zone'],['../namespacetest.html#a36f8cb527290e32f62832b58651ece71',1,'test.zone']]]
+  ['weight_0',['weight',['../classdnscode_1_1dnscode_1_1SRV.html#a8612b39fe2585831e7069dcb044ffa75',1,'dnscode::dnscode::SRV']]]
 ];

@@ -25,17 +25,17 @@
 var NAVTREE =
 [
   [ "DNScode", "index.html", [
-    [ "DNScode", "md_README.html", [
-      [ "Simplifying DNS Zone management", "md_README.html#autotoc_md1", null ],
-      [ "About", "md_README.html#autotoc_md3", null ],
-      [ "Installation", "md_README.html#autotoc_md4", null ]
-    ] ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ],
-      [ "Package Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -46,7 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"files.html"
+"____init_____8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

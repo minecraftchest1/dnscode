@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['invaliaddataexception_0',['InvaliadDataException',['../classmain_1_1InvaliadDataException.html',1,'main']]]
+  ['invaliddataexception_0',['InvalidDataException',['../classdnscode_1_1dnscode_1_1InvalidDataException.html',1,'dnscode::dnscode']]]
 ];

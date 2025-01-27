@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['name_0',['name',['../classmain_1_1Record.html#a5b17196a323776903beb9f4fc124b5ce',1,'main.Record.name'],['../classmain_1_1A.html#a3d96c7e97ae6616eaadcbd8d550e3055',1,'main.A.name'],['../classmain_1_1AAAA.html#a1b3629fa50acfadf6ede0117569c63ac',1,'main.AAAA.name'],['../classmain_1_1CNAME.html#a073737e65984421d4506bdd94e3fa775',1,'main.CNAME.name'],['../classmain_1_1MX.html#a45877922fcfbb9eb8db97c5a19898b50',1,'main.MX.name'],['../classmain_1_1NS.html#a3f86897c9a41ca31896eba4cad58e008',1,'main.NS.name'],['../classmain_1_1PTR.html#ae8467bcf62542c64fb2325ed30d8c382',1,'main.PTR.name'],['../classmain_1_1SOA.html#a2f8eebb0b137887827b2942485979331',1,'main.SOA.name'],['../classmain_1_1SRV.html#a3d380ee3e26b962cb3b89a93f9f6c81e',1,'main.SRV.name']]],
-  ['new_5fa_1',['new_A',['../classmain_1_1Zone.html#adba760f672d54a3df8c18bd5b7e5a858',1,'main::Zone']]],
-  ['new_5faaaa_2',['new_AAAA',['../classmain_1_1Zone.html#a4565629509df65dbbf6fc6ac61175efb',1,'main::Zone']]],
-  ['new_5fcname_3',['new_CNAME',['../classmain_1_1Zone.html#a4b1adc5dce55fd19374b60bd7acd76a4',1,'main::Zone']]],
-  ['new_5fmx_4',['new_MX',['../classmain_1_1Zone.html#addb69a78b5b55a50f5a9c66ac8554c64',1,'main::Zone']]],
-  ['new_5fns_5',['new_NS',['../classmain_1_1Zone.html#a5c6c2c02843a4146b9c635be858433cd',1,'main::Zone']]],
-  ['new_5fptr_6',['new_PTR',['../classmain_1_1Zone.html#a2bd60dffb4462ba1a52869e7cba902ae',1,'main::Zone']]],
-  ['new_5frecord_7',['new_record',['../classmain_1_1Zone.html#a4992ac1055e805e498589e0845e7961c',1,'main::Zone']]],
-  ['new_5fsoa_8',['new_soa',['../classmain_1_1Zone.html#abe4ab49a4368b32c96cf40f8bd1b7823',1,'main::Zone']]],
-  ['new_5fsrv_9',['new_SRV',['../classmain_1_1Zone.html#a51f2b3e463023a0610cd169e455875d0',1,'main::Zone']]],
-  ['ns_10',['NS',['../classmain_1_1NS.html',1,'main']]]
+  ['name_0',['name',['../classdnscode_1_1dnscode_1_1Record.html#a0f33da03220ff62ce0b7e61947c1aae9',1,'dnscode.dnscode.Record.name'],['../classdnscode_1_1dnscode_1_1A.html#a728ff3a23a683fc61e89183678633fdc',1,'dnscode.dnscode.A.name'],['../classdnscode_1_1dnscode_1_1AAAA.html#ad89d4ba507acbfbecf97a6d4bc0afa9a',1,'dnscode.dnscode.AAAA.name'],['../classdnscode_1_1dnscode_1_1CNAME.html#a5868dd148cb5c750453806622c7ae405',1,'dnscode.dnscode.CNAME.name'],['../classdnscode_1_1dnscode_1_1MX.html#abdd875e732800bf3ae574c68a7feb99d',1,'dnscode.dnscode.MX.name'],['../classdnscode_1_1dnscode_1_1NS.html#a47aed399f465f02aa74612cebf63f603',1,'dnscode.dnscode.NS.name'],['../classdnscode_1_1dnscode_1_1PTR.html#af6d4e470392a223e3f643c76dba09f4b',1,'dnscode.dnscode.PTR.name'],['../classdnscode_1_1dnscode_1_1SOA.html#ab698d0c5545ac161be944b03d50e2b71',1,'dnscode.dnscode.SOA.name'],['../classdnscode_1_1dnscode_1_1SRV.html#ab23dad0fbcecfc1c2638e9829840302a',1,'dnscode.dnscode.SRV.name']]],
+  ['new_5fa_1',['new_A',['../classdnscode_1_1dnscode_1_1Zone.html#a231de844d4fb88390d37a0be6dbc962e',1,'dnscode::dnscode::Zone']]],
+  ['new_5faaaa_2',['new_AAAA',['../classdnscode_1_1dnscode_1_1Zone.html#af16862a7d8680f1eb6ab66a92105301f',1,'dnscode::dnscode::Zone']]],
+  ['new_5fcname_3',['new_CNAME',['../classdnscode_1_1dnscode_1_1Zone.html#a2718e32544f9310ce721bce73082bb97',1,'dnscode::dnscode::Zone']]],
+  ['new_5fmx_4',['new_MX',['../classdnscode_1_1dnscode_1_1Zone.html#a41dc247963652b15be123b329aeb1bcf',1,'dnscode::dnscode::Zone']]],
+  ['new_5fns_5',['new_NS',['../classdnscode_1_1dnscode_1_1Zone.html#ae0a178b817cb174866bb5bb33507cb98',1,'dnscode::dnscode::Zone']]],
+  ['new_5fptr_6',['new_PTR',['../classdnscode_1_1dnscode_1_1Zone.html#a579ec534602081efd30fbcbc279bc625',1,'dnscode::dnscode::Zone']]],
+  ['new_5frecord_7',['new_record',['../classdnscode_1_1dnscode_1_1Zone.html#a6ff7d4cb63c08a7d06fc47c341e3bba4',1,'dnscode::dnscode::Zone']]],
+  ['new_5fsoa_8',['new_SOA',['../classdnscode_1_1dnscode_1_1Zone.html#aabed9788e2e4be4c6b0628214492fdbe',1,'dnscode::dnscode::Zone']]],
+  ['new_5fsrv_9',['new_SRV',['../classdnscode_1_1dnscode_1_1Zone.html#aef9ec626cabe184b565418644798e7d4',1,'dnscode::dnscode::Zone']]],
+  ['ns_10',['NS',['../classdnscode_1_1dnscode_1_1NS.html',1,'dnscode::dnscode']]]
 ];

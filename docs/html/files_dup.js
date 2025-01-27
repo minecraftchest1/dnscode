@@ -1,5 +1,4 @@
 var files_dup =
 [
-    [ "minecraftchest1.us.py", "minecraftchest1_8us_8py.html", "minecraftchest1_8us_8py" ],
-    [ "test_dnscode.py", "test__dnscode_8py.html", "test__dnscode_8py" ]
+    [ "src", "dir_68267d1309a1af8e8297ef4c3efbcdba.html", "dir_68267d1309a1af8e8297ef4c3efbcdba" ]
 ];

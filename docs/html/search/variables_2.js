@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zone_0',['zone',['../namespaceminecraftchest1.html#a6498d3c2a0bf9a2aa54a0e38b838ac32',1,'minecraftchest1.zone'],['../namespacetest.html#a36f8cb527290e32f62832b58651ece71',1,'test.zone']]]
+  ['host_0',['host',['../classdnscode_1_1dnscode_1_1MX.html#a467154486271ccfc3bdfb8edfebd33ba',1,'dnscode.dnscode.MX.host'],['../classdnscode_1_1dnscode_1_1NS.html#aa418dd4df63fed40a6f37077f61f502e',1,'dnscode.dnscode.NS.host']]]
 ];

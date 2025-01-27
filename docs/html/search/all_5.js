@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simplifying_20dns_20zone_20management_0',['Simplifying DNS Zone management',['../md_README.html#autotoc_md1',1,'']]]
+  ['host_0',['host',['../classdnscode_1_1dnscode_1_1MX.html#a467154486271ccfc3bdfb8edfebd33ba',1,'dnscode.dnscode.MX.host'],['../classdnscode_1_1dnscode_1_1NS.html#aa418dd4df63fed40a6f37077f61f502e',1,'dnscode.dnscode.NS.host']]]
 ];

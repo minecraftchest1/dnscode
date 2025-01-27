@@ -109,7 +109,25 @@ About</h1>
 <p>DNScode is a project to help simplify DNS zone management, when using plain text files with servers like BIND and NSD. It provides a framework for programmatically generating zone files with Python, allowing for more flexability, compared to other DNS as code solutions.</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Installation</h1>
-<p>DNSCode is a single Python3 script, with very few dependencies, intented to be used as a module inside of another script. Just drop main.py into your project </p>
+<div class="fragment"><div class="line"> bash</div>
+<div class="line"># Create working directory</div>
+<div class="line">mkdir dnsproject</div>
+<div class="line">cd dnsproject</div>
+<div class="line"> </div>
+<div class="line"># Create virtual envrionment (optional, but highly recomended)</div>
+<div class="line">python3 -m venv .venv</div>
+<div class="line">source .venv/bin/activate</div>
+<div class="line"> </div>
+<div class="line"># Install the dnscode package</div>
+<div class="line">pip install dnscode</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Usage</h1>
+<p>``` python </p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+dnsproject.py</h1>
+<p>include dnscode</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Create zone object</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

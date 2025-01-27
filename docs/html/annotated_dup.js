@@ -1,16 +1,18 @@
 var annotated_dup =
 [
-    [ "main", "namespacemain.html", [
-      [ "A", "classmain_1_1A.html", "classmain_1_1A" ],
-      [ "AAAA", "classmain_1_1AAAA.html", "classmain_1_1AAAA" ],
-      [ "CNAME", "classmain_1_1CNAME.html", "classmain_1_1CNAME" ],
-      [ "InvaliadDataException", "classmain_1_1InvaliadDataException.html", "classmain_1_1InvaliadDataException" ],
-      [ "MX", "classmain_1_1MX.html", "classmain_1_1MX" ],
-      [ "NS", "classmain_1_1NS.html", "classmain_1_1NS" ],
-      [ "PTR", "classmain_1_1PTR.html", "classmain_1_1PTR" ],
-      [ "Record", "classmain_1_1Record.html", "classmain_1_1Record" ],
-      [ "SOA", "classmain_1_1SOA.html", "classmain_1_1SOA" ],
-      [ "SRV", "classmain_1_1SRV.html", "classmain_1_1SRV" ],
-      [ "Zone", "classmain_1_1Zone.html", "classmain_1_1Zone" ]
+    [ "dnscode", "namespacednscode.html", [
+      [ "dnscode", "namespacednscode_1_1dnscode.html", [
+        [ "A", "classdnscode_1_1dnscode_1_1A.html", "classdnscode_1_1dnscode_1_1A" ],
+        [ "AAAA", "classdnscode_1_1dnscode_1_1AAAA.html", "classdnscode_1_1dnscode_1_1AAAA" ],
+        [ "CNAME", "classdnscode_1_1dnscode_1_1CNAME.html", "classdnscode_1_1dnscode_1_1CNAME" ],
+        [ "InvalidDataException", "classdnscode_1_1dnscode_1_1InvalidDataException.html", "classdnscode_1_1dnscode_1_1InvalidDataException" ],
+        [ "MX", "classdnscode_1_1dnscode_1_1MX.html", "classdnscode_1_1dnscode_1_1MX" ],
+        [ "NS", "classdnscode_1_1dnscode_1_1NS.html", "classdnscode_1_1dnscode_1_1NS" ],
+        [ "PTR", "classdnscode_1_1dnscode_1_1PTR.html", "classdnscode_1_1dnscode_1_1PTR" ],
+        [ "Record", "classdnscode_1_1dnscode_1_1Record.html", "classdnscode_1_1dnscode_1_1Record" ],
+        [ "SOA", "classdnscode_1_1dnscode_1_1SOA.html", "classdnscode_1_1dnscode_1_1SOA" ],
+        [ "SRV", "classdnscode_1_1dnscode_1_1SRV.html", "classdnscode_1_1dnscode_1_1SRV" ],
+        [ "Zone", "classdnscode_1_1dnscode_1_1Zone.html", "classdnscode_1_1dnscode_1_1Zone" ]
+      ] ]
     ] ]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['zone_0',['zone',['../namespaceminecraftchest1.html#a6498d3c2a0bf9a2aa54a0e38b838ac32',1,'minecraftchest1']]],
-  ['zone_20management_1',['Simplifying DNS Zone management',['../md_README.html#autotoc_md1',1,'']]]
+  ['message_0',['message',['../classdnscode_1_1dnscode_1_1InvalidDataException.html#abe6f6a4e6ebc59a440ebbc43330e3811',1,'dnscode::dnscode::InvalidDataException']]],
+  ['mname_1',['mname',['../classdnscode_1_1dnscode_1_1SOA.html#aa8ccf7ebc102ae4493f630e3f85dab33',1,'dnscode::dnscode::SOA']]],
+  ['mx_2',['MX',['../classdnscode_1_1dnscode_1_1MX.html',1,'dnscode::dnscode']]]
 ];

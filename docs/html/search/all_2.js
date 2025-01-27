@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['installation_0',['Installation',['../md_README.html#autotoc_md4',1,'']]]
+  ['cname_0',['CNAME',['../classdnscode_1_1dnscode_1_1CNAME.html',1,'dnscode::dnscode']]]
 ];

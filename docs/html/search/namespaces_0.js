@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['minecraftchest1_0',['minecraftchest1',['../namespaceminecraftchest1.html',1,'']]]
+  ['dnscode_0',['dnscode',['../namespacednscode.html',1,'']]],
+  ['dnscode_3a_3adnscode_1',['dnscode',['../namespacednscode_1_1dnscode.html',1,'dnscode']]]
 ];
