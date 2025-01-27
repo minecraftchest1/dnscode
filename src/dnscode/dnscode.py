@@ -20,6 +20,11 @@ import time
 import ipaddress
 import fqdn
 
+"""@package dnscode
+
+Simplifying DNS Zone management
+"""
+
 class InvalidDataException(Exception):
 	"""Exception raised when invalid data is passed to a record."""
 
@@ -252,7 +257,7 @@ class Zone:
 		name = self.__mkfqdn(name)
 		self.add(PTR(name=name, ttl=ttl, host=host))
 
-	def new_soa(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com',
+	def new_SOA(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com',
 				serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200,
 				expire: int = 15552000, ttl: int = 21700):
 		"""Creates and adds a new SOA record to the zone."""
