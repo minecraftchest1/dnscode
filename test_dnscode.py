@@ -28,7 +28,7 @@ def test_A(tmp_path):
 	zone_file_1 = tmp_path / "test-A.zone"
 	zone.save_file(zone_file_1)
 
-	expected = """@ 3600 IN SOA ns1.minecraftchest1.us. admin.minecraftchest1.us. 1 65535 3600 15552000
+	expected = """@ 3600 IN SOA ns1.minecraftchest1.us. admin.minecraftchest1.us. 1 65535 3600 15552000 65535
 1.minecraftchest1.us. 3600 IN A 0.0.0.0
 2.minecraftchest1.us. 60 IN A 0.0.0.0
 3.minecraftchest1.us. 60 IN A 0.0.0.0
