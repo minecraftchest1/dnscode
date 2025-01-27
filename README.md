@@ -9,5 +9,18 @@ DNScode is a project to help simplify DNS zone management, when using plain text
 files with Python, allowing for more flexability, compared to other DNS as code solutions.
 
 ## Installation
+``` bash
+# Create working directory
+mkdir dnsproject
+cd dnsproject
 
-DNSCode is a single Python3 script, with very few dependencies, intented to be used as a module inside of another script. Just drop main.py into your project 
+# Create virtual envrionment (optional, but highly recomended)
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install the dnscode package
+pip install dnscode
+```
+
+## Usage
+Todo
