@@ -2,7 +2,9 @@ import dnscode
 import pytest
 
 def test_A(tmp_path):
-	zone = dnscode.Zone(origin='minecraftchest1.us')
+	zone = dnscode.Zone(origin='minecraftchest1.us.')
+
+	zone.new_SOA(mname='ns1.minecraftchest1.us.', rname='admin.minecraftchest1.us.', serial=1, refresh=65535, retry=3600, ttl=3600)
 
 	# Test named and positional arguments. Ensure defaults work.
 	zone.new_A("1")
@@ -26,7 +28,8 @@ def test_A(tmp_path):
 	zone_file_1 = tmp_path / "test-A.zone"
 	zone.save_file(zone_file_1)
 
-	expected = """1.minecraftchest1.us. 3600 IN A 0.0.0.0
+	expected = """@ 3600 IN SOA ns1.minecraftchest1.us. admin.minecraftchest1.us. 1 65535 3600 15552000
+1.minecraftchest1.us. 3600 IN A 0.0.0.0
 2.minecraftchest1.us. 60 IN A 0.0.0.0
 3.minecraftchest1.us. 60 IN A 0.0.0.0
 @.minecraftchest1.us. 3600 IN A 0.0.0.0
@@ -35,10 +38,11 @@ def test_A(tmp_path):
 5.minecraftchest1.us. 120 IN A 0.0.0.0
 6.minecraftchest1.us. 3600 IN A 0.0.0.0
 @.minecraftchest1.us. 60 IN A 0.0.0.0
+
 """
 
 	f = open(zone_file_1, "rt")
-	assert expected == f.read()
+	assert expected.strip() == f.read().strip()
 
 ##############################################
 
