@@ -169,7 +169,7 @@ class SOA(Record):
 		self.retry	= retry
 		self.expire	= expire
 		self.ttl	= ttl
-		self.data	= f"{self.name} {self.ttl} IN SOA {self.mname} {self.rname} {self.serial} {self.refresh} {self.retry} {self.expire}"
+		self.data	= f"{self.mname} {self.rname} {self.serial} {self.refresh} {self.retry} {self.expire}"
 
 @dataclass
 class SRV(Record):
