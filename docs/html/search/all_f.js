@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zone_0',['Zone',['../classdnscode_1_1dnscode_1_1Zone.html',1,'dnscode::dnscode']]]
+  ['weight_0',['weight',['../classdnscode_1_1dnscode_1_1SRV.html#a8612b39fe2585831e7069dcb044ffa75',1,'dnscode::dnscode::SRV']]]
 ];

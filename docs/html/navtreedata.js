@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "DNScode", "index.html", [
+    [ "Simplifying DNS Zone management", "index.html#autotoc_md1", null ],
+    [ "About", "index.html#autotoc_md3", null ],
+    [ "Installation", "index.html#autotoc_md4", null ],
+    [ "Usage", "index.html#autotoc_md5", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
