@@ -16,7 +16,7 @@ steps:
    image: python:3-alpine
    commands:
     - apk add git openssh
-    - mkdir .ssh/id_rs
+    - mkdir .ssh
     - echo ${SSH_KEY} > ${HOME}/.ssh/id_ed25519
     - git config user.email "dnscode@ci.minec1.us"
     - git config --global user.name "DNSCODE CI"
