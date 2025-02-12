@@ -206,11 +206,11 @@ class TXT(Record):
 
 	#target: str
 
-	def __init__(self, name: str = '@', ttl: int = 3600, txt: str = 'example.com'):
+	def __init__(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
 		self.rtype	= 'CNAME'
 		self.name	= str(name)
 		self.ttl	= ttl
-		self.data	= txt
+		self.data	= text
 
 @dataclass
 class Zone:
@@ -286,7 +286,7 @@ class Zone:
 	def new_TXT(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(CNAME(name=name, ttl=ttl, txt=txt))
+		self.add(CNAME(name=name, ttl=ttl, text=text))
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		"""Creates and adds a generic DNS record to the zone."""
