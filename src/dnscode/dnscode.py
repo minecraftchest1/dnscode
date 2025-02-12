@@ -201,6 +201,18 @@ class SRV(Record):
 		self.data = f"{self.priority} {self.weight} {self.port} {self.target}"
 
 @dataclass
+class TXT(Record):
+	"""Represents a 'CNAME' (Canonical Name) record."""
+
+	#target: str
+
+	def __init__(self, name: str = '@', ttl: int = 3600, txt: str = 'example.com'):
+		self.rtype	= 'CNAME'
+		self.name	= str(name)
+		self.ttl	= ttl
+		self.data	= txt
+
+@dataclass
 class Zone:
 	"""Represents a DNS zone containing multiple records."""
 	origin: str = 'example.com'
@@ -270,6 +282,11 @@ class Zone:
 		name = self.__mkfqdn(name)
 		self.add(SRV(name=name, ttl=ttl, service=service, protocol=protocol,
 				priority=priority, weight=weight, host=host))
+
+	def new_TXT(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
+		"""Creates and adds a new CNAME record to the zone."""
+		name = self.__mkfqdn(name)
+		self.add(CNAME(name=name, ttl=ttl, txt=txt))
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		"""Creates and adds a generic DNS record to the zone."""

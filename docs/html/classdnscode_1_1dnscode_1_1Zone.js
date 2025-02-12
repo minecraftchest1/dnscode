@@ -12,6 +12,7 @@ var classdnscode_1_1dnscode_1_1Zone =
     [ "new_record", "classdnscode_1_1dnscode_1_1Zone.html#a6ff7d4cb63c08a7d06fc47c341e3bba4", null ],
     [ "new_SOA", "classdnscode_1_1dnscode_1_1Zone.html#aabed9788e2e4be4c6b0628214492fdbe", null ],
     [ "new_SRV", "classdnscode_1_1dnscode_1_1Zone.html#aef9ec626cabe184b565418644798e7d4", null ],
+    [ "new_TXT", "classdnscode_1_1dnscode_1_1Zone.html#a602dd6071a6c3d1017e155c7ca2512a2", null ],
     [ "save_file", "classdnscode_1_1dnscode_1_1Zone.html#adfe5442ed2137a324f1c5ba676ba2043", null ],
     [ "records", "classdnscode_1_1dnscode_1_1Zone.html#a1e958c8be9cf4cc7c0f30bd227e15c5a", null ]
 ];

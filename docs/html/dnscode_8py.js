@@ -10,5 +10,6 @@ var dnscode_8py =
     [ "dnscode.dnscode.PTR", "classdnscode_1_1dnscode_1_1PTR.html", "classdnscode_1_1dnscode_1_1PTR" ],
     [ "dnscode.dnscode.SOA", "classdnscode_1_1dnscode_1_1SOA.html", "classdnscode_1_1dnscode_1_1SOA" ],
     [ "dnscode.dnscode.SRV", "classdnscode_1_1dnscode_1_1SRV.html", "classdnscode_1_1dnscode_1_1SRV" ],
+    [ "dnscode.dnscode.TXT", "classdnscode_1_1dnscode_1_1TXT.html", "classdnscode_1_1dnscode_1_1TXT" ],
     [ "dnscode.dnscode.Zone", "classdnscode_1_1dnscode_1_1Zone.html", "classdnscode_1_1dnscode_1_1Zone" ]
 ];

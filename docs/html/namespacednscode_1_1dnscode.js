@@ -10,5 +10,6 @@ var namespacednscode_1_1dnscode =
     [ "Record", "classdnscode_1_1dnscode_1_1Record.html", "classdnscode_1_1dnscode_1_1Record" ],
     [ "SOA", "classdnscode_1_1dnscode_1_1SOA.html", "classdnscode_1_1dnscode_1_1SOA" ],
     [ "SRV", "classdnscode_1_1dnscode_1_1SRV.html", "classdnscode_1_1dnscode_1_1SRV" ],
+    [ "TXT", "classdnscode_1_1dnscode_1_1TXT.html", "classdnscode_1_1dnscode_1_1TXT" ],
     [ "Zone", "classdnscode_1_1dnscode_1_1Zone.html", "classdnscode_1_1dnscode_1_1Zone" ]
 ];
