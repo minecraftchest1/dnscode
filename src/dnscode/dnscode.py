@@ -286,7 +286,7 @@ class Zone:
 	def new_TXT(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
 		name = self.__mkfqdn(name)
-		self.add(CNAME(name=name, ttl=ttl, text=text))
+		self.add(TXT(name=name, ttl=ttl, text=text))
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		"""Creates and adds a generic DNS record to the zone."""
