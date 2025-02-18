@@ -18,7 +18,6 @@ from enum import Enum
 from dataclasses import dataclass, field
 import time
 import ipaddress
-import fqdn
 
 """@package dnscode
 
@@ -88,11 +87,7 @@ class CNAME(Record):
 		self.rtype	= 'CNAME'
 		self.name	= str(name)
 		self.ttl	= ttl
-
-		if fqdn.FQDN(host).is_valid:
-			self.data = host
-		else:
-			raise InvalidDataException(message=f'{host} is not a valid FQDN')
+		self.data = host
 
 @dataclass
 class MX(Record):
@@ -107,11 +102,7 @@ class MX(Record):
 		self.priority	= priority
 		self.host = host
 		self.data = f"{self.priority} {self.host}"
-
-		if fqdn.FQDN(host).is_valid:
-			self.data = f"{self.priority} {self.host}"
-		else:
-			raise InvalidDataException(message=f'{host} is not a valid FQDN')
+		self.data = f"{self.priority} {self.host}"
 
 @dataclass
 class NS(Record):
@@ -124,11 +115,7 @@ class NS(Record):
 		self.name	= name
 		self.ttl	= ttl
 		self.host	= target
-
-		if fqdn.FQDN(host).is_valid:
-			self.data = host
-		else:
-			raise InvalidDataException(message=f'{host} is not a valid FQDN')
+		self.data = host
 
 @dataclass
 class PTR(Record):
@@ -140,11 +127,7 @@ class PTR(Record):
 		self.rtype	= 'PTR'
 		self.name	= name
 		self.ttl	= ttl
-
-		if fqdn.FQDN(host).is_valid:
-			self.data = host
-		else:
-			raise InvalidDataException(message=f'{host} is not a valid FQDN')
+		self.data = host
 
 @dataclass
 class SOA(Record):
@@ -192,12 +175,7 @@ class SRV(Record):
 		self.priority	= priority
 		self.weight	= weight
 		self.port	= port
-
-		if fqdn.FQDN(target).is_valid:
-			self.target = target
-		else:
-			raise InvalidDataException(message=f'{target} is not a valid FQDN')
-
+		self.target = target
 		self.data = f"{self.priority} {self.weight} {self.port} {self.target}"
 
 @dataclass
