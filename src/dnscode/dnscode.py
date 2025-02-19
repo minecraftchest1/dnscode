@@ -255,11 +255,11 @@ class Zone:
 		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
 
 	def new_SRV(self, name: str = '@', ttl: int = 3600, service: str = 'service', protocol: str = 'proto',
-				priority: int = 10, weight: int = 10, host: str = 'example.com'):
+				priority: int = 10, weight: int = 10, port: int = 443, host: str = 'example.com'):
 		"""Creates and adds a new SRV record to the zone."""
 		name = self.__mkfqdn(name)
 		self.add(SRV(name=name, ttl=ttl, service=service, protocol=protocol,
-				priority=priority, weight=weight, host=host))
+				priority=priority, weight=weight, port=port, host=host))
 
 	def new_TXT(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""

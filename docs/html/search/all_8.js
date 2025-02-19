@@ -9,7 +9,7 @@ var searchData=
   ['new_5fptr_6',['new_PTR',['../classdnscode_1_1dnscode_1_1Zone.html#a579ec534602081efd30fbcbc279bc625',1,'dnscode::dnscode::Zone']]],
   ['new_5frecord_7',['new_record',['../classdnscode_1_1dnscode_1_1Zone.html#a6ff7d4cb63c08a7d06fc47c341e3bba4',1,'dnscode::dnscode::Zone']]],
   ['new_5fsoa_8',['new_SOA',['../classdnscode_1_1dnscode_1_1Zone.html#aabed9788e2e4be4c6b0628214492fdbe',1,'dnscode::dnscode::Zone']]],
-  ['new_5fsrv_9',['new_SRV',['../classdnscode_1_1dnscode_1_1Zone.html#aef9ec626cabe184b565418644798e7d4',1,'dnscode::dnscode::Zone']]],
+  ['new_5fsrv_9',['new_SRV',['../classdnscode_1_1dnscode_1_1Zone.html#a9b7c828acb3d62f8c677efb4a858ef97',1,'dnscode::dnscode::Zone']]],
   ['new_5ftxt_10',['new_TXT',['../classdnscode_1_1dnscode_1_1Zone.html#a602dd6071a6c3d1017e155c7ca2512a2',1,'dnscode::dnscode::Zone']]],
   ['ns_11',['NS',['../classdnscode_1_1dnscode_1_1NS.html',1,'dnscode::dnscode']]]
 ];

@@ -128,8 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a579ec534602081efd30fbcbc279bc625"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabed9788e2e4be4c6b0628214492fdbe" id="r_aabed9788e2e4be4c6b0628214492fdbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabed9788e2e4be4c6b0628214492fdbe">new_SOA</a> (self, str mname='ns1.example.com', str rname='admin.example.com', int serial=int(time.time()), int refresh=86400, int retry=7200, int expire=15552000, int ttl=21700)</td></tr>
 <tr class="separator:aabed9788e2e4be4c6b0628214492fdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef9ec626cabe184b565418644798e7d4" id="r_aef9ec626cabe184b565418644798e7d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef9ec626cabe184b565418644798e7d4">new_SRV</a> (self, str name='@', int ttl=3600, str service='service', str protocol='proto', int priority=10, int weight=10, str host='example.com')</td></tr>
-<tr class="separator:aef9ec626cabe184b565418644798e7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7c828acb3d62f8c677efb4a858ef97" id="r_a9b7c828acb3d62f8c677efb4a858ef97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b7c828acb3d62f8c677efb4a858ef97">new_SRV</a> (self, str name='@', int ttl=3600, str service='service', str protocol='proto', int priority=10, int weight=10, int port=443, str host='example.com')</td></tr>
+<tr class="separator:a9b7c828acb3d62f8c677efb4a858ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a602dd6071a6c3d1017e155c7ca2512a2" id="r_a602dd6071a6c3d1017e155c7ca2512a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a602dd6071a6c3d1017e155c7ca2512a2">new_TXT</a> (self, str name='@', int ttl=3600, str text='example.com')</td></tr>
 <tr class="separator:a602dd6071a6c3d1017e155c7ca2512a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ff7d4cb63c08a7d06fc47c341e3bba4" id="r_a6ff7d4cb63c08a7d06fc47c341e3bba4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ff7d4cb63c08a7d06fc47c341e3bba4">new_record</a> (self, str name='@', int ttl=3600, str rtype='<a class="el" href="classdnscode_1_1dnscode_1_1A.html">A</a>', str data='0.0.0.0')</td></tr>
@@ -486,8 +486,8 @@ Static Public Attributes</h2></td></tr>
 <pre class="fragment">Creates and adds a new SOA record to the zone.</pre> 
 </div>
 </div>
-<a id="aef9ec626cabe184b565418644798e7d4" name="aef9ec626cabe184b565418644798e7d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef9ec626cabe184b565418644798e7d4">&#9670;&#160;</a></span>new_SRV()</h2>
+<a id="a9b7c828acb3d62f8c677efb4a858ef97" name="a9b7c828acb3d62f8c677efb4a858ef97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b7c828acb3d62f8c677efb4a858ef97">&#9670;&#160;</a></span>new_SRV()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,6 +526,11 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int </td>          <td class="paramname"><span class="paramname"><em>port</em></span><span class="paramdefsep"> = </span><span class="paramdefval">443</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
