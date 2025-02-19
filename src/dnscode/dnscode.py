@@ -185,7 +185,7 @@ class TXT(Record):
 	#target: str
 
 	def __init__(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
-		self.rtype	= 'CNAME'
+		self.rtype	= 'TXT'
 		self.name	= str(name)
 		self.ttl	= ttl
 		self.data	= text
