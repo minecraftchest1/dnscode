@@ -114,7 +114,7 @@ class NS(Record):
 		self.rtype	= 'NS'
 		self.name	= name
 		self.ttl	= ttl
-		self.host	= target
+		self.host	= host
 		self.data = host
 
 @dataclass
