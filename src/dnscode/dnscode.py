@@ -175,8 +175,8 @@ class SRV(Record):
 		self.priority	= priority
 		self.weight	= weight
 		self.port	= port
-		self.target = target
-		self.data = f"{self.priority} {self.weight} {self.port} {self.target}"
+		self.host = host
+		self.data = f"{self.priority} {self.weight} {self.port} {self.host}"
 
 @dataclass
 class TXT(Record):
