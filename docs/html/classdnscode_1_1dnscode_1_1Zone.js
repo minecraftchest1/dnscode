@@ -14,5 +14,6 @@ var classdnscode_1_1dnscode_1_1Zone =
     [ "new_SRV", "classdnscode_1_1dnscode_1_1Zone.html#a9b7c828acb3d62f8c677efb4a858ef97", null ],
     [ "new_TXT", "classdnscode_1_1dnscode_1_1Zone.html#a602dd6071a6c3d1017e155c7ca2512a2", null ],
     [ "save_file", "classdnscode_1_1dnscode_1_1Zone.html#adfe5442ed2137a324f1c5ba676ba2043", null ],
+    [ "save_stdout", "classdnscode_1_1dnscode_1_1Zone.html#a9c2c7f534d5ab0f841bf4ad2fb62f188", null ],
     [ "records", "classdnscode_1_1dnscode_1_1Zone.html#a1e958c8be9cf4cc7c0f30bd227e15c5a", null ]
 ];

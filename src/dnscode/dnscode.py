@@ -275,9 +275,12 @@ class Zone:
 		"""Adds a record to the zone."""
 		self.records.append(record)
 
+	def save_stdout(self):
+		for record in self.records:
+			print(str(record))
+
 	def save_file(self, filepath: str):
 		"""Saves the zone records to a file."""
 		with open(filepath, 'w') as file:
 			for record in self.records:
 				file.write(str(record) + '\n')
-				print(str(record))
