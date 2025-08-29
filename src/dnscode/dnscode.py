@@ -102,7 +102,6 @@ class MX(Record):
 		self.priority	= priority
 		self.host = host
 		self.data = f"{self.priority} {self.host}"
-		self.data = f"{self.priority} {self.host}"
 
 @dataclass
 class NS(Record):
