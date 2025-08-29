@@ -180,7 +180,7 @@ class SRV(Record):
 
 @dataclass
 class TXT(Record):
-	"""Represents a 'CNAME' (Canonical Name) record."""
+	"""Represents a 'TXT' (Text) record."""
 
 	#target: str
 
