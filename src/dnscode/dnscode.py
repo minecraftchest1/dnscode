@@ -219,33 +219,63 @@ class Zone:
 
 	def new_A(self, name: str = '@', ttl: int = 3600, host: str = '0.0.0.0'):
 		"""Creates and adds a new A record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(A(name=name, ttl=ttl, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(A(name=recordname, ttl=ttl, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(A(name=name, ttl=ttl, host=host))
 
 	def new_AAAA(self, name: str = '@', ttl: int = 3600, host: str = 'fe80::42:2cff:fe29:8db1'):
 		"""Creates and adds a new AAAA record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(AAAA(name=name, ttl=ttl, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(AAAA(name=recordname, ttl=ttl, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(AAAA(name=name, ttl=ttl, host=host))
 
 	def new_CNAME(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(CNAME(name=name, ttl=ttl, host=host))
+		if isinstance(name, list):
+			for recodname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(CNAME(name=recordname, ttl=ttl, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(CNAME(name=name, ttl=ttl, host=host))
 
 	def new_MX(self, name: str = '@', ttl: int = 3600, priority: int = 10, host: str = 'example.com'):
 		"""Creates and adds a new MX record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(MX(name=name, ttl=ttl, priority=priority, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(MX(name=recordname, ttl=ttl, priority=priority, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(MX(name=name, ttl=ttl, priority=priority, host=host))
 
 	def new_NS(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new NS record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(NS(name=name, ttl=ttl, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(NS(name=recordname, ttl=ttl, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(NS(name=name, ttl=ttl, host=host))
 
 	def new_PTR(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new PTR record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(PTR(name=name, ttl=ttl, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(PTR(name=recordname, ttl=ttl, host=host))
+		else:	
+			name = self.__mkfqdn(name)
+			self.add(PTR(name=name, ttl=ttl, host=host))
 
 	def new_SOA(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com',
 				serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200,
@@ -257,14 +287,25 @@ class Zone:
 	def new_SRV(self, name: str = '@', ttl: int = 3600, service: str = 'service', protocol: str = 'proto',
 				priority: int = 10, weight: int = 10, port: int = 443, host: str = 'example.com'):
 		"""Creates and adds a new SRV record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(SRV(name=name, ttl=ttl, service=service, protocol=protocol,
-				priority=priority, weight=weight, port=port, host=host))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(SRV(name=recordname, ttl=ttl, service=service, protocol=protocol,
+						priority=priority, weight=weight, port=port, host=host))
+		else:
+			name = self.__mkfqdn(name)
+			self.add(SRV(name=name, ttl=ttl, service=service, protocol=protocol,
+					priority=priority, weight=weight, port=port, host=host))
 
 	def new_TXT(self, name: str = '@', ttl: int = 3600, text: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
-		name = self.__mkfqdn(name)
-		self.add(TXT(name=name, ttl=ttl, text=text))
+		if isinstance(name, list):
+			for recordname in name:
+				recordname = self.__mkfqdn(recordname)
+				self.add(TXT(name=recordname, ttl=ttl, text=text))
+		else:		
+			name = self.__mkfqdn(name)
+			self.add(TXT(name=name, ttl=ttl, text=text))
 
 	def new_record(self, name: str = '@', ttl: int = 3600, rtype: str = 'A', data: str = '0.0.0.0'):
 		"""Creates and adds a generic DNS record to the zone."""
