@@ -239,7 +239,7 @@ class Zone:
 	def new_CNAME(self, name: str = '@', ttl: int = 3600, host: str = 'example.com'):
 		"""Creates and adds a new CNAME record to the zone."""
 		if isinstance(name, list):
-			for recodname in name:
+			for recordname in name:
 				recordname = self.__mkfqdn(recordname)
 				self.add(CNAME(name=recordname, ttl=ttl, host=host))
 		else:
