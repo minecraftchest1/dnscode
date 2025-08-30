@@ -276,12 +276,12 @@ class Zone:
 			name = self.__mkfqdn(name)
 			self.add(PTR(name=name, ttl=ttl, host=host))
 
-	def new_SOA(self, mname: str = 'ns1.example.com', rname: str = 'admin.example.com',
+	def new_SOA(self, name, mname: str = 'ns1.example.com', rname: str = 'admin.example.com',
 				serial: int = int(time.time()), refresh: int = 86400, retry: int = 7200,
 				expire: int = 15552000, ttl: int = 21700):
 		"""Creates and adds a new SOA record to the zone."""
 		mname = self.__mkfqdn(mname)
-		self.add(SOA(mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
+		self.add(SOA(name=name,mname=mname, rname=rname, serial=serial, refresh=refresh, retry=retry, expire=expire, ttl=ttl))
 
 	def new_SRV(self, name: str = '@', ttl: int = 3600, service: str = 'service', protocol: str = 'proto',
 				priority: int = 10, weight: int = 10, port: int = 443, host: str = 'example.com'):
