@@ -187,7 +187,7 @@ class TXT(Record):
 		self.rtype	= 'TXT'
 		self.name	= str(name)
 		self.ttl	= ttl
-		self.data	= text
+		self.data	= "'" + text + "'"
 
 @dataclass
 class Zone:
