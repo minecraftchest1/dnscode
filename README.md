@@ -50,7 +50,7 @@ zone.save_file('example.zone')
 
 ## Donte
 
-If you find this project useful, feel free to leave me a tip with Ko-Fi.
+If you find this project useful, feel free to leave me a tip with [Ko-Fi](https://ko-fi.com/minecraftchest1).
 
 
 <iframe id='kofiframe' src='https://ko-fi.com/minecraftchest1/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='minecraftchest1'></iframe>
